@@ -98,7 +98,7 @@ fit.ctree
 #run model against test data set
 predict.ctree <- predict(fit.ctree, test_factor)
 
-#build a dataframe without results
+#build a dataframe with our results
 submit.ctree <- data.frame(datetime = test$datetime, count=predict.ctree)
 
 #write results to .csv for submission
