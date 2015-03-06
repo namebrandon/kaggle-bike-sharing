@@ -46,10 +46,10 @@ aggregate(train_factor[,"count"],list(train_factor$day),mean)
 
 #create Sunday variable
 train_factor$sunday[train_factor$day == "Sunday"] <- "1"
-train_factor$sunday[train_factor$day != "1"] <- "0"
+train_factor$sunday[train_factor$day != "Sunday"] <- "0"
 
 test_factor$sunday[test_factor$day == "Sunday"] <- "1"
-test_factor$sunday[test_factor$day != "1"] <- "0"
+test_factor$sunday[test_factor$day != "Sunday"] <- "0"
 
 #convert to factor
 train_factor$sunday <- as.factor(train_factor$sunday)
